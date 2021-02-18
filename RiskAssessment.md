@@ -4,3 +4,5 @@ Threat | Description | Likelihood Level | Impact Level | Responsibility | Curren
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
 placeholder | placeholder | placeholder | placeholder | placeholder | placeholder | placeholder | placeholder | placeholder
 placeholder | placeholder | placeholder | placeholder | placeholder | placeholder | placeholder | placeholder | placeholder
+
+<span style="color:blue">some *blue* text</span>.

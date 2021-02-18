@@ -26,4 +26,4 @@ Core cloud concepts and tools involved in this project, along with a set of high
   
 ## The App Idea
 
-A tuition scheduler web app allows the user to **create, read, update, and delete** student, course, and lesson entries, while also allowing the user to export a receipt of money owed per student at the end of the month.
+A tuition scheduler web app which allows the user to **create, read, update, and delete** student, course, and lesson entries, while also letting the user to export a receipt of money owed per student at the end of the month.

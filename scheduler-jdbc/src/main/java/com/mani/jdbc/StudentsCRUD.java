@@ -54,7 +54,7 @@ public class StudentsCRUD {
 			ResultSet rs = pStatement.executeQuery();
 			List<Student> student = new ArrayList<>();
 			while (rs.next()) {
-				student.add(resultsSetConverter(rs));
+				student.add(resultSetConverter(rs));
 			}
 			con.close();
 			// in the future i could return a list here with the things needed.
@@ -73,12 +73,12 @@ public class StudentsCRUD {
 	public void readFirstName(String firstName) {
 		try {
 			DBConnector con = new DBConnector();
-			String searchQuery = "SELECT * FROM students WHERE first_name SOUNDS LIKE ?";
+			String searchQuery = "SELECT * FROM students WHERE first_name SOUNDS LIKE ?;";
 			pStatement = con.connection.prepareStatement(searchQuery);
 			pStatement.setString(1, firstName);
 			ResultSet rs = pStatement.executeQuery();
 			while (rs.next()) {
-				resultsSetConverter(rs);
+				resultSetConverter(rs);
 			}
 			con.close();
 		} catch (SQLException e) {
@@ -92,14 +92,17 @@ public class StudentsCRUD {
 	
 	// edit contact number details of existing students,(UPDATE)
 	// if the user doesnt know the studentID but knows the first name ..
-	// ..you can add that functionality to the runner. 
+		// ..you can add that functionality to the runner. 
+		// you have to do it this way because people can have the same first name.
 	public void updateContactNumber(Student student) {
 		try{
 			DBConnector con = new DBConnector();
-			String updateQuery = "UPDATE students SET contact_number = '?' WHERE student_id = ?";
+			String updateQuery = "UPDATE students SET contact_number = '?' WHERE student_id = ?;";
 			pStatement = con.connection.prepareStatement(updateQuery);
 			pStatement.setString(1, student.getContactNumber());
 			pStatement.setInt(2, student.getStudentID());
+			pStatement.executeUpdate();
+			con.close();
 			
 		} catch (SQLException e) {
 			// TODO: handle exception
@@ -110,13 +113,31 @@ public class StudentsCRUD {
 	
 	
 	// delete existing students (DELETE)
+	//same problem as Update.
+		// if the user doesnt know the studentID but knows the first name ..
+		// ..you can add that functionality to the runner. 
+		// you have to do it this way because people can have the same first name.
+	public void delete(int studentID) {
+		try{
+			DBConnector con = new DBConnector();
+			String deleteQuery = "DELETE FROM students WHERE student_id = ?;";
+			pStatement = con.connection.prepareStatement(deleteQuery);
+			pStatement.setInt(1, studentID);
+			pStatement.executeUpdate();
+			con.close();
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}
+	}
+	
 	
 	
 	
 	
 	
 	//method to format entries from ResultSet that's returned from the query.
-	public Student resultsSetConverter(ResultSet rs) throws SQLException {
+	public Student resultSetConverter(ResultSet rs) throws SQLException {
 			int id = rs.getInt("student_id");
 			String fname = rs.getString("first_name");
 			String lname = rs.getString("last_name");

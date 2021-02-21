@@ -90,12 +90,22 @@ public class StudentsCRUD {
 	
 	
 	
-//	// edit contact number details of existing students,(UPDATE)
-//	// first you need to select the endtry by readingContactNumber
-//	public void updateContactNumber(Student student) {
-//		DBConnector con = new DBConnector();
-//		//String updateQuery = ""
-//	}
+	// edit contact number details of existing students,(UPDATE)
+	// if the user doesnt know the studentID but knows the first name ..
+	// ..you can add that functionality to the runner. 
+	public void updateContactNumber(Student student) {
+		try{
+			DBConnector con = new DBConnector();
+			String updateQuery = "UPDATE students SET contact_number = '?' WHERE student_id = ?";
+			pStatement = con.connection.prepareStatement(updateQuery);
+			pStatement.setString(1, student.getContactNumber());
+			pStatement.setInt(2, student.getStudentID());
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}
+		
+	}
 	
 	
 	

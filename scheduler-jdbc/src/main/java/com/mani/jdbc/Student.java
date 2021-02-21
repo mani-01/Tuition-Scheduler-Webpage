@@ -2,6 +2,7 @@ package com.mani.jdbc;
 
 public class Student {
 
+	private int studentID;
 	private String firstName;
 	private String lastName;
 	private int age;
@@ -14,6 +15,14 @@ public class Student {
 		this.age = age;
 		this.parentName = parentName;
 		this.contactNumber = contactNumber;
+	}
+
+	public int getStudentID() {
+		return studentID;
+	}
+
+	public void setStudentID(int studentID) {
+		this.studentID = studentID;
 	}
 
 	public String getFirstName() {

@@ -10,7 +10,10 @@ public class StudentsCRUD {
 	
 	PreparedStatement pStatement;
 	
-	// adding a new student to the database.
+	
+	
+	
+	// adding a new student to the database. (CREATE)
 	public void create(Student student){
 		try {
 			DBConnector con = new DBConnector();
@@ -38,8 +41,11 @@ public class StudentsCRUD {
 		}
 	}
 
+	
+	
+	
 
-//	//get a list of all the students.
+//	//get a list of all the students. (READ)
 	public void readAll() {
 		try {
 			DBConnector con = new DBConnector();
@@ -61,8 +67,10 @@ public class StudentsCRUD {
 	}
 	
 	
-	// get a contact number of a student by searching the first name.
-	public void readContactNumber(String firstName) {
+	
+	
+	// get a contact number of a student by searching the first name. (READ)
+	public void readFirstName(String firstName) {
 		try {
 			DBConnector con = new DBConnector();
 			String searchQuery = "SELECT * FROM students WHERE first_name SOUNDS LIKE ?";
@@ -79,9 +87,22 @@ public class StudentsCRUD {
 		}
 	}
 	
-	// edit existing students
 	
-	// delete existing students
+	
+	
+//	// edit contact number details of existing students,(UPDATE)
+//	// first you need to select the endtry by readingContactNumber
+//	public void updateContactNumber(Student student) {
+//		DBConnector con = new DBConnector();
+//		//String updateQuery = ""
+//	}
+	
+	
+	
+	// delete existing students (DELETE)
+	
+	
+	
 	
 	
 	//method to format entries from ResultSet that's returned from the query.

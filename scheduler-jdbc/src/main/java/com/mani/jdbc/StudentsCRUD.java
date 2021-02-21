@@ -8,13 +8,13 @@ import java.util.List;
 
 public class StudentsCRUD {
 	
-	PreparedStatement pStatement;
+	static PreparedStatement pStatement;
 	
 	
 	
 	
 	// adding a new student to the database. (CREATE)
-	public void create(Student student){
+	public static void create(Student student){
 		try {
 			DBConnector con = new DBConnector();
 			//using preparedStatements to increase security.
@@ -46,7 +46,7 @@ public class StudentsCRUD {
 	
 
 //	//get a list of all the students. (READ)
-	public void readAll() {
+	public static void readAll() {
 		try {
 			DBConnector con = new DBConnector();
 			String searchQuery = "SELECT * from students";
@@ -70,7 +70,7 @@ public class StudentsCRUD {
 	
 	
 	// get a contact number of a student by searching the first name. (READ)
-	public void readFirstName(String firstName) {
+	public static void readFirstName(String firstName) {
 		try {
 			DBConnector con = new DBConnector();
 			String searchQuery = "SELECT * FROM students WHERE first_name SOUNDS LIKE ?;";
@@ -94,7 +94,7 @@ public class StudentsCRUD {
 	// if the user doesnt know the studentID but knows the first name ..
 		// ..you can add that functionality to the runner. 
 		// you have to do it this way because people can have the same first name.
-	public void updateContactNumber(Student student) {
+	public static void updateContactNumber(Student student) {
 		try{
 			DBConnector con = new DBConnector();
 			String updateQuery = "UPDATE students SET contact_number = '?' WHERE student_id = ?;";
@@ -117,7 +117,7 @@ public class StudentsCRUD {
 		// if the user doesnt know the studentID but knows the first name ..
 		// ..you can add that functionality to the runner. 
 		// you have to do it this way because people can have the same first name.
-	public void delete(int studentID) {
+	public static void delete(int studentID) {
 		try{
 			DBConnector con = new DBConnector();
 			String deleteQuery = "DELETE FROM students WHERE student_id = ?;";
@@ -137,7 +137,7 @@ public class StudentsCRUD {
 	
 	
 	//method to format entries from ResultSet that's returned from the query.
-	public Student resultSetConverter(ResultSet rs) throws SQLException {
+	public static Student resultSetConverter(ResultSet rs) throws SQLException {
 			int id = rs.getInt("student_id");
 			String fname = rs.getString("first_name");
 			String lname = rs.getString("last_name");

@@ -22,36 +22,24 @@ public class Runner {
 		// asking for Create, Read Update or Delete
 		System.out.println("Enter CRUD operation:");
 		String userCRUD = getAction(); 
-		
 		// 'try finally' means after everything is done it runs the finally.
 		try {
 			do {
 				switch (userCRUD) {
 				case "create":
-					
-					//working on this atm...
-					//try create new to table
-					
-					Create cre = new Create();
-					
-					System.out.println("Enter Student's First Name:");
-					String f = sc.nextLine();
-					System.out.println("Enter Student's Last Name:");
-					String l = sc.nextLine();
-					System.out.println("Enter Student's Age:");
-					int age = Integer.valueOf(sc.nextLine());
-					System.out.println("Enter Parent's Name:");
-					String p = sc.nextLine();
-					System.out.println("Enter a Contact Number:");
-					String c = sc.nextLine();
-					
-					cre.addStudent(f,l,age,p,c);
-					
-					System.out.println("type exit");
-					
+					Student s = new Student("mani555", "ggg555", 55, "parent5", "075555555");
+					StudentsCRUD scrud = new StudentsCRUD();
+					scrud.create(s);
 					
 					break;
+
 				case "read":
+					StudentsCRUD scrud1 = new StudentsCRUD();
+					scrud1.readFirstName("mani");				
+					break;
+				case "readall":
+					StudentsCRUD scrud2 = new StudentsCRUD();
+					scrud2.readAll();
 					break;
 				case "update":
 					break;

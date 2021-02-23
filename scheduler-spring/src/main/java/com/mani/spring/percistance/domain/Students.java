@@ -1,6 +1,9 @@
 package com.mani.spring.percistance.domain;
 
+// THIS IS THE DOMAIN
+
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -43,6 +46,10 @@ public class Students {
 		this.age = age;
 		this.parentName = parentName;
 		this.contactNumber = contactNumber;
+	}
+	
+	public Students(){
+		
 	}
 	
 

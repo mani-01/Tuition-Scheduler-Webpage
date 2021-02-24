@@ -4,9 +4,9 @@ import java.sql.SQLException;
 
 public class Create {
 	
-	Connector con = new Connector();
+	DBConnector con = new DBConnector();
 	
-	public void addStudent(
+	public void createNewStudent(
 			String first_name, 
 			String last_name, 
 			int age, String 
@@ -14,7 +14,7 @@ public class Create {
 			String contact_number) throws SQLException { // how do i catch this exception?
 		
 		
-		String statement = "insert into students(first_name, last_name, age, parent_name, contact_number) VALUES ("
+		String statement = "INSERT INTO students(first_name, last_name, age, parent_name, contact_number) VALUES ("
 				+ "'" + first_name + "'" + ","
 				+ "'" + last_name + "'" + ","
 				+ age + ","

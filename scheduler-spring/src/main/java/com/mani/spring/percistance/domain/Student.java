@@ -22,7 +22,7 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor // need it for testing( the contructor with the id)
-public class Students {
+public class Student {
 
 	@Column
 	@Id
@@ -49,7 +49,7 @@ public class Students {
 	
 
 	//this contructor is without the id so lombok cannot replace this.
-	public Students(String firstName, String lastName, int age, String parentName, String contactNumber) {
+	public Student(String firstName, String lastName, int age, String parentName, String contactNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;

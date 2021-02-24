@@ -28,18 +28,15 @@ public class Runner {
 				switch (userCRUD) {
 				case "create":
 					Student s = new Student("mani555", "ggg555", 55, "parent5", "075555555");
-					StudentsCRUD scrud = new StudentsCRUD();
-					scrud.create(s);
+					StudentsCRUD.create(s);
 					
 					break;
 
 				case "read":
-					StudentsCRUD scrud1 = new StudentsCRUD();
-					scrud1.readFirstName("mani");				
+					StudentsCRUD.readFirstName("mani");				
 					break;
 				case "readall":
-					StudentsCRUD scrud2 = new StudentsCRUD();
-					scrud2.readAll();
+					StudentsCRUD.readAll();
 					break;
 				case "update":
 					break;

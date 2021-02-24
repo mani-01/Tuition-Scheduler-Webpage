@@ -8,19 +8,22 @@ import org.springframework.stereotype.Service;
 import com.mani.spring.percistance.domain.Students;
 import com.mani.spring.percistance.domain.repository.StudentsRepository;
 
+import lombok.AllArgsConstructor;
+
 // the service gets information from the repository.
 // similar to how the service methods were used in rest controller, 
 // the repo methods are going to be used in the service.
 @Service
+@AllArgsConstructor
 public class StudentsService {
 	
 	private StudentsRepository repo;
 	
-	// contructor
-	@Autowired 
-	public StudentsService(StudentsRepository repo) {
-		this.repo = repo;
-	}
+//	// REMOVED BECAUSE OF LOMBOK
+//	@Autowired 
+//	public StudentsService(StudentsRepository repo) {
+//		this.repo = repo;
+//	}
 	
 	
 	//crud methods in the service. 
@@ -32,13 +35,18 @@ public class StudentsService {
 	
 	public List<Students> readAll(){
 		List<Students> thingsReadFromDb = this.repo.findAll();
-		return thingsReadFromDb; 
-	}
+		return thingsReadFromDb;
+	} 
 	
 	public Students readBystudentID(int studentID) {
 		Students thingReadFromDb = this.repo.getOne(studentID);
 		return thingReadFromDb;
-		
+	}
+	
+	
+	public List<Students> findStudentsByfirstName(String firstName){
+		List<Students> thingfromRepo = this.repo.findStudentsByfirstName(firstName);
+		return thingfromRepo;
 	}
 	
 	public  Students updateBystudentID(int studentID, Students s) {

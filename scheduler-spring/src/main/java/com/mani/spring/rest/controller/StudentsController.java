@@ -69,12 +69,19 @@ public class StudentsController {
 		// the '.ok' thing means it would return a http ok code 200.
 	}
 	
-	//read by id (search by name later)
+	//read by id
 	@GetMapping("/read/{id}")
 	public ResponseEntity<Students> readBystudentID(@PathVariable int studentID){
 		Students returnedObject = this.service.readBystudentID(studentID);
 		
 		return ResponseEntity.ok(returnedObject);
+	}
+	
+	// read by name sounds like -custom query
+	@GetMapping("/read/firstName/{firstName}")
+	public ResponseEntity<List<Students>> readByfirstName(@PathVariable String firstName){
+		List<Students> found = this.service.findStudentsByfirstName(firstName);
+		return ResponseEntity.ok(found);
 	}
 	
 	

@@ -3,9 +3,9 @@
 *Cloud Native Fundamental Project 1 - February 2021*
 
 - [Tuition Scheduler App](#tuition-scheduler-app)
-  - [Project Brief & Requirements](#project-brief--requirements)
-  - [The App Idea](#the-app-idea)
-    - [User Flow Diagram](#user-flow-diagram)
+	- [Project Brief & Requirements](#project-brief--requirements)
+	- [The App Idea](#the-app-idea)
+		- [User Flow Diagram](#user-flow-diagram)
 
 ## Project Brief & Requirements
 
@@ -32,7 +32,7 @@ A tuition scheduler web app which allows the user to **create, read, update, and
 As part of the initial planning stage, a flow chart was created to outline the basic app idea. It maps the steps the user can take from page to page.
 
  
-![scheduler-user-flow](https://previews.dropbox.com/p/thumb/ABFyN5sLDonrDjkfTIlyriIXdkul6JZeujjQvSmFW_Kf7EJcLaRcr0b2EpIQSNeW8Xj7MwRZVrjo0EXRQnM2kPSDEYguKYMKxbaSlOj4xgRZRY9enL2ulIO5g39cdUDE7C3_-bXcN94QNZQbztVJJ02Tgtj7YLZG4oHuQ1UY9YTD90q9ivmulnAF4KVZ4802JOoam1gihq_pptbwRuxfHO0vIvoM0SUOHDjm5jPefgUAlewVcwoGburlxNXP2hsLztY9acV5ysmiQAUFeRF3xC9pE9hVJ5ci123Dl9GPHT-tp2inXs3D9ibGh01ve_R4MGM0YMfb0KymOMGUeq9lFAqXr3cFM61r7PhHjggXhP0wwA/p.png)
+![scheduler-user-flow]()
 
 
 

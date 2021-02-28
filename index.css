@@ -24,7 +24,7 @@
 }
 
 .btn {
-	background-color: #3f7578;
+	background-color: #1c6e8c;
 	outline: none;
 	box-shadow: none;
 	border: 0px;
@@ -39,16 +39,16 @@
 
 .btn:hover {
 	outline: none;
-	background-color: #2a5153;
+	background-color: #0a2f3d;
 }
 
 .btn:focus {
 	outline: none;
-	background-color: #3f7578;
+	background-color: #1c6e8c;
 	box-shadow: none;
 }
 .btn:active {
-	background-color: #172d2e;
+	background-color: #041a22;
 	outline: none;
 	box-shadow: none;
 }
@@ -102,17 +102,43 @@
 #landing-page table {
 	margin-left: auto;
 	margin-right: auto;
-
 	max-width: 500px;
 	min-width: 200px;
+	margin-bottom: 100px;
 }
 
 #landing-page td {
 	text-align: center;
 	vertical-align: middle;
-	padding: 10px 10px;
+	padding: 10px 30px;
 }
 
-#landing-page body{
-	background-color:#EDFCF0;
+#landing-page body {
+	/* background-color:#F5D6BA; */
+	background-color: #d0ccd0;
+}
+
+#main-pages body {
+	background-color: #fbfcff;
+}
+
+#main-pages table {
+	padding: 20px;
+}
+
+#main-pages .bg-light {
+	background-color: #d0ccd0 !important;
+}
+
+#main-pages .collapsed {
+	background-color: #1c6e8c !important;
+}
+
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
 }

@@ -3,6 +3,7 @@ package com.mani.spring.percistance.domain.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
 import com.mani.spring.percistance.domain.Student;
 
 //repos in spring are interfaces, not classes
@@ -17,8 +18,9 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 	
 	// 'sounds like' wont work because there is no function like that in SQL
 	// when using MySQL you can use 'sounds like'.
-	//@Query("SELECT s FROM Students s WHERE s.firstName SOUNDS LIKE :firstName")
-	List<Student> findStudentByFirstNameLike(String firstName);
+	//@Query("SELECT s FROM Student s WHERE s.firstName = :firstName")
+	List<Student> findByFirstNameLike(String firstName);
+	
 
 	
 }

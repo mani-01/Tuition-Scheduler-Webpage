@@ -79,8 +79,8 @@ public class StudentController {
 	
 	// read by name sounds like -custom query
 	@GetMapping("/read/firstName/{firstName}")
-	public ResponseEntity<List<Student>> findStudentByFirstNameLike(@PathVariable String firstName){
-		List<Student> found = this.service.findStudentByFirstNameLike(firstName);
+	public ResponseEntity<List<Student>> findByFirstNameLike(@PathVariable String firstName){
+		List<Student> found = this.service.findByFirstNameLike(firstName);
 		return ResponseEntity.ok(found);
 	}
 	
@@ -97,9 +97,9 @@ public class StudentController {
 	
 	
 	// delete by id
-	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<Student> deleteByStudentID(@PathVariable int studentId) {
-		if (this.service.deleteByStudentID(studentId)) {
+	@DeleteMapping("/delete/{studentID}")
+	public ResponseEntity<Student> deleteByStudentID(@PathVariable int studentID) {
+		if (this.service.deleteByStudentID(studentID)) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT); //successfully deleted. 
 		} else {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

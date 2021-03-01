@@ -3,7 +3,9 @@ package com.mani.spring.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 
 import com.mani.spring.exception.StudentNotFoundException;
 import com.mani.spring.percistance.domain.Student;
@@ -44,8 +46,8 @@ public class StudentService {
 	
 	
 	//exception does not work properly?
-	public List<Student> findStudentByFirstNameLike(String firstName) {
-			List<Student> thingFromRepo = this.repo.findStudentByFirstNameLike(firstName);
+	public List<Student> findByFirstNameLike(String firstName) {
+			List<Student> thingFromRepo = this.repo.findByFirstNameLike(firstName);
 			return thingFromRepo;
 	}
 	
@@ -69,11 +71,8 @@ public class StudentService {
 		return !this.repo.existsById(studnetID);
 	}
 	
-	
-	
-	
-	
 
+	
 }
 
 

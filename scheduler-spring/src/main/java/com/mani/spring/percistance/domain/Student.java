@@ -19,7 +19,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor // need it for testing( the contructor with the id)
 public class Student {
@@ -37,6 +36,7 @@ public class Student {
 	private String lastName;
 	
 	@Column
+	@NotNull
 	@Min(1)
 	@Max(120)
 	private int age;
@@ -58,54 +58,68 @@ public class Student {
 		this.contactNumber = contactNumber;
 	}
 
-	// COMMENTED OUT BECAUSE OF LOMBOK
-//	public int getStudentID() {
-//		return studentID;
-//	}
-//
-//	public void setStudentID(int studentID) {
-//		this.studentID = studentID;
-//	}
-//
-//	public String getFirstName() {
-//		return firstName;
-//	}
-//
-//	public void setFirstName(String firstName) {
-//		this.firstName = firstName;
-//	}
-//
-//	public String getLastName() {
-//		return lastName;
-//	}
-//
-//	public void setLastName(String lastName) {
-//		this.lastName = lastName;
-//	}
-//
-//	public int getAge() {
-//		return age;
-//	}
-//
-//	public void setAge(int age) {
-//		this.age = age;
-//	}
-//
-//	public String getParentName() {
-//		return parentName;
-//	}
-//
-//	public void setParentName(String parentName) {
-//		this.parentName = parentName;
-//	}
-//
-//	public String getContactNumber() {
-//		return contactNumber;
-//	}
-//
-//	public void setContactNumber(String contactNumber) {
-//		this.contactNumber = contactNumber;
-//	}
+
+	public int getStudentID() {
+		return studentID;
+	}
+
+
+	public void setStudentID(int studentID) {
+		this.studentID = studentID;
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+	public String getParentName() {
+		return parentName;
+	}
+
+
+	public void setParentName(String parentName) {
+		this.parentName = parentName;
+	}
+
+
+	public String getContactNumber() {
+		return contactNumber;
+	}
+
+
+	public void setContactNumber(String contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+
+	
+	
 	
 	
 	

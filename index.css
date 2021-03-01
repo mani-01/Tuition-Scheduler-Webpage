@@ -130,15 +130,37 @@
 	background-color: #d0ccd0 !important;
 }
 
-#main-pages .collapsed {
-	background-color: #1c6e8c !important;
-}
 
 .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.navbar-toggler:focus {
+
+.navbar-toggler:hover {
     text-decoration: none;
     outline: 0;
     box-shadow: none;
+	background-color: #a19ea1 !important;
+}
+.navbar-toggler:active {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+	background-color: #646264 !important;
+}
+
+
+#main-pages td {
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px 30px;
+	/* border: #041a22;
+	border-style: dashed; */
+}
+
+#main-pages table {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 500px;
+	min-width: 200px;
+	margin-bottom: 100px;
 }

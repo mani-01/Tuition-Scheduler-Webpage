@@ -5,7 +5,6 @@
 - [Tuition Scheduler App](#tuition-scheduler-app)
 	- [Project Brief & Requirements](#project-brief--requirements)
 	- [The App Idea](#the-app-idea)
-		- [User Flow Diagram](#user-flow-diagram)
 
 ## Project Brief & Requirements
 
@@ -19,21 +18,20 @@ Below is a set of high-level requirements to be fulfilled for the successful com
 - Create a **SQL** relational database used to store data persistently for the project.
 - Create an application in **Java** that meets the requirements set on the Kanban Board.
 - Using **HTML**, **CSS** and **JavaScript**, create a functioning front-end website and integrate API.
-- Design automated tests for validation of the application using **JUnit** and **Mockito** for unit testing, and **Selenium** for integration testing.
-- Build code thorough **CI Server**.
+- Design automated tests for validation of the application using **JUnit** and **Mockito** for unit and integration testing.
 - Deploy the app to a **GCP virtual machine**.
 - Integrate the code fully into the version control system, **Git**.
   
 ## The App Idea
 
-A tuition scheduler web app which allows the user to **create, read, update, and delete** student, course, and lesson entries, while also letting the user to export a receipt of money owed per student at the end of the month.
+A tuition scheduler web app which allows the user to **create, read, update, and delete** student entries from a databasse.
 
-### User Flow Diagram
-As part of the initial planning stage, a flow chart was created to outline the basic app idea. It maps the steps the user can take from page to page.
 
- 
-![scheduler-user-flow]()
 
+
+
+<!-- ### User Flow Diagram
+As part of the initial planning stage, a flow chart was created to outline the basic app idea. It maps the steps the user can take from page to page. -->
 
 
 <!-- 

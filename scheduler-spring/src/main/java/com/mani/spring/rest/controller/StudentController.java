@@ -70,7 +70,7 @@ public class StudentController {
 	}
 	
 	//read by id
-	@GetMapping("/read/{studentID}")
+	@GetMapping("/read/studentID/{studentID}")
 	public ResponseEntity<Student> readByStudentID(@PathVariable int studentID){
 		Student returnedObject = this.service.readByStudentID(studentID);
 		
@@ -89,7 +89,7 @@ public class StudentController {
 		// step 1 - get the object you want to change
 		// step 2 - change it
 		// step 3 - put it back
-	@PutMapping("/update/{studentID}") // the '{studentID}' relates to the path variable.
+	@PutMapping("/update/studentID/{studentID}") // the '{studentID}' relates to the path variable.
 	public ResponseEntity<Student> updateByStudentID(@PathVariable int studentID, @RequestBody Student s){
 		Student updatedObject = this.service.updateByStudentID(studentID, s);
 		return new ResponseEntity<>(updatedObject, HttpStatus.ACCEPTED); // http code 200
@@ -97,7 +97,7 @@ public class StudentController {
 	
 	
 	// delete by id
-	@DeleteMapping("/delete/{studentID}")
+	@DeleteMapping("/delete/studentID/{studentID}")
 	public ResponseEntity<Student> deleteByStudentID(@PathVariable int studentID) {
 		if (this.service.deleteByStudentID(studentID)) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT); //successfully deleted. 

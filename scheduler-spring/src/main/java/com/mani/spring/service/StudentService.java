@@ -46,7 +46,7 @@ public class StudentService {
 	
 	
 	//exception does not work properly?
-	public List<Student> findByFirstNameLike(String firstName) {
+	public List<Student> findByFirstNameLike(String firstName) throws StudentNotFoundException{
 			List<Student> thingFromRepo = this.repo.findByFirstNameLike(firstName);
 			return thingFromRepo;
 	}
@@ -64,7 +64,7 @@ public class StudentService {
 			return this.repo.save(thingToUpdate);
 	}
 	
-	public boolean deleteByStudentID(int studnetID) {
+	public boolean deleteByStudentID(int studnetID) throws StudentNotFoundException {
 		// delete object
 		this.repo.deleteById(studnetID);
 		// then check if object is deleted and output if true

@@ -1,5 +1,6 @@
 package com.mani.spring.rest.controller;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -20,6 +21,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.ResultActions;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mani.spring.percistance.domain.Student;
@@ -27,10 +30,10 @@ import com.mani.spring.percistance.domain.Student;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@Sql(scripts = {"classpath:data.sql"}, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD) //loading in fake data
-@ActiveProfiles(profiles = "test")
+//the thing below clears everything and populates the database with test data before doing the test and clears it fully before starting another.
+@Sql(scripts = { "classpath:schema.sql", "classpath:data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD) //loading in fake data
+//@ActiveProfiles(profiles = "test")
 public class StudentControllerIntegrationTest {
-	
 	@Autowired
 	private MockMvc mockMvc;
 	
@@ -60,52 +63,63 @@ public class StudentControllerIntegrationTest {
                 .andExpect(content().json(simulatedUserPost));
 	}
 	
+
 	@Test
 	void readAllTest() throws Exception {
 		//Student object together as a list converted to json
 		String sList = this.mapper.writeValueAsString(STUDENTS);
-		System.out.println("dkfjskdfjdskfds"+ sList);
 		
 		this.mockMvc.perform(get("/student/readAll").accept(MediaType.APPLICATION_JSON)) // why is this perform method getting me 3 sets of the same json array!!!!!!!!
 				.andExpect(status().isOk())
                 .andExpect(content().json(sList));
 	}
 	
+	
+	
 	@Test
 	void readByStudentIDTest() throws Exception {
 		String s = this.mapper.writeValueAsString(TEST_STUDENT_1);
+		System.out.println(s);
+		System.out.println(s);
+		System.out.println(s);
 		
-		this.mockMvc.perform(get("/student/read/" + TEST_STUDENT_1.getStudentID()).accept(MediaType.APPLICATION_JSON))
+		this.mockMvc.perform(get("/student/read/studentID/" + (TEST_STUDENT_1.getStudentID())).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
                 .andExpect(content().json(s));
+		
 	}
+
 	
 	@Test
 	void findByFirstNameLikeTest() throws Exception {
-		String sList = this.mapper.writeValueAsString(TEST_STUDENT_1);
-		
-		this.mockMvc.perform(get("/read/firstName/" + (TEST_STUDENT_1.getFirstName())).accept(MediaType.APPLICATION_JSON)) // why is this perform method getting me 3 sets of the same json array!!!!!!!!
+		String sList = "[" + this.mapper.writeValueAsString(TEST_STUDENT_1) + "]"; // need these brackets as there can be multiple people with the same first name, unlike studentID
+		this.mockMvc.perform(get("/student/read/firstName/" + (TEST_STUDENT_1.getFirstName())).accept(MediaType.APPLICATION_JSON)) 
 				.andExpect(status().isOk())
                 .andExpect(content().json(sList));
+		
 	}
-	
+
 	@Test
 	void updateByStudentIDTest() throws Exception {
-		String s = this.mapper.writeValueAsString(TEST_STUDENT_1);
+		String s = this.mapper.writeValueAsString(TEST_STUDENT_2);
+		System.out.println(s);
+		System.out.println(s);
+		System.out.println(s);
+		System.out.println(s);
 		
-		this.mockMvc.perform(put("/update/" + (TEST_STUDENT_1.getStudentID())).accept(MediaType.APPLICATION_JSON)
+		this.mockMvc.perform(put("/student/update/studentID/" + (TEST_STUDENT_2.getStudentID())).accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON).content(s))
-		.andExpect(status().isOk())
+		.andExpect(status().isAccepted())
         .andExpect(content().json(s));
 		
 	}
-	
+//	
 	@Test
 	void deleteByStudentIDTest() throws Exception {
-		String s = this.mapper.writeValueAsString(TEST_STUDENT_1);
+		String s = this.mapper.writeValueAsString(TEST_STUDENT_3);
 		
-		this.mockMvc.perform(delete("/delete/" + TEST_STUDENT_1.getStudentID()))
-		.andExpect(status().isOk());
+		this.mockMvc.perform(delete("/student/delete/studentID/" + TEST_STUDENT_3.getStudentID()))
+		.andExpect(status().isNoContent());
 	}
 	
 	

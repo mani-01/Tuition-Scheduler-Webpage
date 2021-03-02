@@ -8,9 +8,4 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "Student doesn't exist in db.") // lets you make custom http respose statuses for it
 public class StudentNotFoundException extends EntityNotFoundException {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 }

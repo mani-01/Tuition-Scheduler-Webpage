@@ -24,7 +24,7 @@ import com.mani.spring.percistance.domain.repository.StudentRepository;
 
 // bean that lets the programme know that this is a test. 
 @SpringBootTest
-@ActiveProfiles(profiles = "test")
+//@ActiveProfiles(profiles = "test")
 public class StudentServiceUnitTest {
 
 	@Autowired // this is the real thing that we're testing to see if it works (GIVEN)

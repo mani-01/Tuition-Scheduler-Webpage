@@ -1,29 +1,16 @@
-.padding-nav {
-	padding: 50pt;
+#landing-page body {
+	/* background-color:#F5D6BA; */
+	background-color: #d0ccd0;
 }
 
-.vertical {
-	vertical-align: middle;
+#landing-page .smallerLogo {
+	width: 300px;
 }
 
-.img-fluid {
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 30px;
-	align-content: center;
-}
 
-.welcomeText {
-	text-align: center;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 500px;
-	padding: 30px;
-}
 
-.btn {
+
+/* .btn {
 	background-color: #1c6e8c;
 	outline: none;
 	box-shadow: none;
@@ -36,12 +23,10 @@
 	padding-inline-start: 5%;
 	padding-inline-end: 5%;
 }
-
 .btn:hover {
 	outline: none;
 	background-color: #0a2f3d;
 }
-
 .btn:focus {
 	outline: none;
 	background-color: #1c6e8c;
@@ -55,112 +40,4 @@
 .btn:active:focus {
 	outline: none;
 	box-shadow: none;
-}
-
-.nav-item {
-	padding-inline-start: 30px;
-	padding-inline-end: 30px;
-}
-
-.remove-outline-box-s {
-	outline: none;
-	box-shadow: green;
-}
-
-.form-control {
-	display: block;
-	width: 100%;
-	padding: 0.375rem 0.75rem;
-	font-size: large;
-}
-
-.nav-link:hover {
-	opacity: 70%;
-}
-
-/* .nav-link{
-    font-size: larger;
-    background-color: #2a5153;
-    border-radius: 10px;
-    
-    padding-left: 10px;
-    padding-right: 10px;
-    padding: 10px;
-
 } */
-.currentPage {
-	font-weight: 700;
-	/* background-color: #b6b6b6; */
-}
-
-.paddedTable {
-	padding: 30px;
-	background-color: white;
-	border-radius: 10px;
-}
-
-#landing-page table {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 500px;
-	min-width: 200px;
-	margin-bottom: 100px;
-}
-
-#landing-page td {
-	text-align: center;
-	vertical-align: middle;
-	padding: 10px 30px;
-}
-
-#landing-page body {
-	/* background-color:#F5D6BA; */
-	background-color: #d0ccd0;
-}
-
-#main-pages body {
-	background-color: #fbfcff;
-}
-
-#main-pages table {
-	padding: 20px;
-}
-
-#main-pages .bg-light {
-	background-color: #d0ccd0 !important;
-}
-
-
-.navbar-toggler-icon {
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-toggler:hover {
-    text-decoration: none;
-    outline: 0;
-    box-shadow: none;
-	background-color: #a19ea1 !important;
-}
-.navbar-toggler:active {
-    text-decoration: none;
-    outline: 0;
-    box-shadow: none;
-	background-color: #646264 !important;
-}
-
-
-#main-pages td {
-	text-align: center;
-	vertical-align: middle;
-	padding: 10px 30px;
-	/* border: #041a22;
-	border-style: dashed; */
-}
-
-#main-pages table {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 500px;
-	min-width: 200px;
-	margin-bottom: 100px;
-}

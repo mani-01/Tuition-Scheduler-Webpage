@@ -61,7 +61,7 @@
               <p class="card-text">
                 Add New Student.
               </p>
-              <a href="sadfdsf.html" id="stretched-link"></a>
+              <a href="" id="stretched-link" alt="add new student"></a>
             </div>
           </div>
         </div>
@@ -71,15 +71,23 @@
         <div class="col">
           <div class="card h-100 cardColor">
             <div class="card-body">
-              <h5 class="card-title">firstName lastName</h5>
+
+              <div class="row">
+                <div class="col-8">
+                  <h5 class="card-title">firstName lastName</h5>
+                </div>
+                <div class="col-4 text-end">
+                  ID
+                </div>
+              </div>
+
+
               <p class="card-text">
-              <ul>
-                <li>Age:</li>
-                <li>Parent's Name:</li>
-                <li>Contact Number:</li>
-              </ul>
-
-
+                Age:
+                <br>
+                Parent's Name:
+                <br>
+                Contact Number:
 
               </p>
             </div>
@@ -99,11 +107,47 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ...
+              <!-- % form (inside modal) here ------------------------->
+              <form>
+                <!--first and last name input --> <!--note need to change the aria-labels?? -->
+                <div class="row mb-4">
+                  <div class="row">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">First Name</span>
+                      <input type="text" class="form-control" placeholder="first name" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Last Name</span>
+                      <input type="text" class="form-control" placeholder="last name" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- age input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Age</span>
+                  <input type="number" class="form-control" placeholder="age" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              
+                <!-- parent name input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Parent's Name</span>
+                  <input type="text" class="form-control" placeholder="parent's name" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+
+                <!-- contact number input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Contact Number</span>
+                  <input type="number" class="form-control" placeholder="contact number" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              <!-- % form (inside modal) here END ---------->
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary mani-button">Understood</button>
+              <button type="submit" class="btn btn-primary mani-button">Understood</button>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 #landing-page body {
-	/* background-color:#F5D6BA; */
-	background-color: #d0ccd0;
+	background-color: #A2BABC;
 }
 
 #landing-page .smallerLogo {
@@ -8,6 +7,58 @@
 }
 
 
+.cardColor {
+	background-color: #455769;
+	color: #F3F5F2;
+}
+
+.startCardColor {
+	background-color: #A2BABC;
+	color: #455769;
+	border-color: #455769;
+}
+
+.btn:hover{
+	background-color: #455769;
+	color: #A2BABC;
+}
+
+
+
+/* * nice colors that i can use 
+#F3F5F2
+#818484
+#A2BABC
+#807B7A
+#455769
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* div {
+	border: 1px;
+	border-style: solid;
+	background-color: coral;
+} */
 
 
 /* .btn {

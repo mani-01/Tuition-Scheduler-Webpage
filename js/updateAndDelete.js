@@ -29,7 +29,7 @@ let modalUpdateDelete = (dataI, i) => {
   const modalTitle = document.createElement("h5");
   modalTitle.className = "modal-title";
   modalTitle.id = "staticBackdropLabel";
-  modalTitle.innerText = "Update Contact Number or Delete Student.";
+  modalTitle.innerText = "Update Details or Delete Student.";
 
   const modalXButton = document.createElement("button");
   modalXButton.type = "button";
@@ -87,8 +87,27 @@ let modalUpdateDelete = (dataI, i) => {
   modelBodyContactNumber.className = "";
   modelBodyContactNumber.innerText = `Contact Number : ${dataI.contactNumber}`;
   modelBodyContactNumber.id = "alignLeft";
-
   // *---------------------------DATABASE INFO
+
+  const modalFooter = document.createElement("div");
+  modalFooter.className = "modal-footer";
+
+  const modalEditButton = document.createElement("button");
+  modalEditButton.innerText = "Edit";
+  modalEditButton.className = "btn btn-secondary";
+  modalEditButton.setAttribute("type", "button")
+  
+  const modalDeleteButton = document.createElement("button");
+  modalDeleteButton.innerText = "Delete";
+  modalDeleteButton.className = "btn btn-secondary";
+  modalDeleteButton.setAttribute("type", "submit")
+  
+  
+  const modalCloseButton = document.createElement("button");
+  modalCloseButton.innerText = "Cancel";
+  modalCloseButton.className = "btn btn-secondary";
+  modalCloseButton.setAttribute("type", "button")
+  modalCloseButton.setAttribute("data-bs-dismiss", "modal")
 
 
 
@@ -109,9 +128,26 @@ let modalUpdateDelete = (dataI, i) => {
                 modalInfoRowChild.appendChild(modelBodyAge)
                 modalInfoRowChild.appendChild(modelBodyParentName)
                 modalInfoRowChild.appendChild(modelBodyContactNumber)
+          modalContent.appendChild(modalFooter);
+          modalFooter.appendChild(modalEditButton);
+          modalFooter.appendChild(modalDeleteButton);
+          modalFooter.appendChild(modalCloseButton);
+
+
+
+
+
+
 };
 
 /*
+
+<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary mani-button">Understood</button>
+      </div>
+
+
 
 <!-- ! UPDATE STUDENT/ DELETE STUDENT MODAL -->
 <div class="modal fade" id="deleteUpdateStudentModal" data-bs-backdrop="static" data-bs-keyboard="false"

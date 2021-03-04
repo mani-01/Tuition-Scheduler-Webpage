@@ -1,5 +1,5 @@
 #landing-page body {
-	background-color: #A2BABC;
+	background-color: #d0e2e4;
 }
 
 #landing-page .smallerLogo {
@@ -13,19 +13,22 @@
 }
 
 .startCardColor {
-	background-color: #A2BABC;
+	background-color: #d0e2e4;
 	color: #455769;
 	border-color: #455769;
 }
 
+#alignLeft {
+	text-align: left;
+}
 
 .btnAddNewStudent:hover{
 	background-color: #455769;
-	color: #A2BABC;
+	color: #d0e2e4;
 }
 .btnAddNewStudent:active{
 	background-color: #28333f;
-	color: #A2BABC;
+	color: #d0e2e4;
 }
 
 .btnStudentCard:hover{
@@ -34,7 +37,7 @@
 }
 .btnStudentCard:active{
 	background-color: #141a20;
-	color: #A2BABC;
+	color: #d0e2e4;
 }
 
 

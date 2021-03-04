@@ -86,9 +86,9 @@ let createCard = (data) => {
 
 		cardBodyDiv.appendChild(cardRow);
 
-		cardBodyDiv.appendChild(cardTextAge);
-		cardBodyDiv.appendChild(cardTextParentName);
-		cardBodyDiv.appendChild(cardTextContactNum);
+		// cardBodyDiv.appendChild(cardTextAge);
+		// cardBodyDiv.appendChild(cardTextParentName);
+		// cardBodyDiv.appendChild(cardTextContactNum);
 
 		createNewCard.appendChild(cardBodyDiv);
 		cardColInGrid.appendChild(createNewCard);

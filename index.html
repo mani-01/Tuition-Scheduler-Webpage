@@ -69,7 +69,34 @@
         </div>
         <!-- !  ADD CARD END -------------------------------------- -->
 
-        <!-- ! CARD START -------------------------------------- 
+
+<!-- !  TEST CARD START -------------------------------------- -->
+<div class="col" id="cardCol">
+  <div class="card h-100 cardColor btn btnStudentCard" id="alignLeft" data-bs-toggle="modal"
+  data-bs-target="#deleteUpdateStudentModal">
+    <div class="card-body" id="cardBody">
+
+      <div class="row" id="cardRow">
+        <div class="col-8" id="cardCol1">
+          <h5 class="card-title" id="cardTitle alignLeft">firstName lastName</h5>
+        </div>
+        <div class="col-4 text-end">
+          ID
+        </div>
+      </div>
+
+      <p class="card-text">Age: placeholder tester</p>
+      <p class="card-text">Parent's Name: placeholder tester</p>
+      <p class="card-text">Contact Number: placeholder tester</p>
+
+    </div>
+  </div>
+</div>
+<!-- !  TEST CARD END -------------------------------------- -->
+
+
+
+        <!-- ! dont delete CARD START -------------------------------------- 
         <div class="col" id="cardCol">
           <div class="card h-100 cardColor btn btnStudentCard" id="alignLeft">
             <div class="card-body" id="cardBody">
@@ -90,23 +117,10 @@
             </div>
           </div>
         </div>
-        <!-- ! CARD END --------------------------------------->
+        <!-- ! dont deleteCARD END --------------------------------------->
 
       </div> <!-- ? CARD GRID DIV END-->
 
-
-      <!-- footer -->
-      <footer style="padding: 30px;">
-        <div class="text-center p-3" style="color: #455769;">
-          ~Made by Mani~
-        </div>
-        <div class="text-center p-3">
-            <a class="text-dark" style="opacity: 40%;">Click me!</a>
-          
-        </div>
-
-      </footer>
-      <!-- footer -->
 
 
 
@@ -182,6 +196,72 @@
 
 
 
+      <!-- ! UPDATE STUDENT/ DELETE STUDENT MODAL -->
+      <div class="modal fade" id="deleteUpdateStudentModal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel" style="color:red">Delete or update student details.</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- % form (inside modal) here ------------------------->
+              <form>
+                <!--first and last name input -->
+                <!--note need to change the aria-labels?? -->
+                <div class="row mb-4">
+                  <div class="row">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">First Name</span>
+                      <input type="text" class="form-control" placeholder="first name" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Last Name</span>
+                      <input type="text" class="form-control" placeholder="last name" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- age input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Age</span>
+                  <input type="number" class="form-control" placeholder="age" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                </div>
+
+                <!-- parent name input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Parent's Name</span>
+                  <input type="text" class="form-control" placeholder="parent's name" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                </div>
+
+
+                <!-- contact number input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Contact Number</span>
+                  <input type="number" class="form-control" placeholder="contact number" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                </div>
+                <!-- % form (inside modal) here END ---------->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary mani-button">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ! UPDATE STUDENT/ DELETE STUDENT MODAL END------------------------------->
+
+
+
+
     </div>
   </div>
   </div>
@@ -196,6 +276,22 @@
 
 
 
+  <!-- footer -->
+  <footer style="padding: 30px;">
+    <div class="text-center p-3" style="color: #455769;">
+      ~Made by Mani~
+    </div>
+    <div class="text-center p-3">
+      <a class="text-dark" style="opacity: 40%;">Click me!</a>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="bi bi-arrow-90deg-up"></i>
+      </button>
+    </div>
+  </footer>
+  <!-- footer -->
+
+
+
   <!--bootstrap javascript part-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
@@ -206,7 +302,7 @@
   <!-- note <script src="js/update.js"></script>
     <!-- note script src="js/delete.js"></script> -->
 
-<!-- please ignore-->
+  <!-- please ignore-->
 </body>
 
 </html>

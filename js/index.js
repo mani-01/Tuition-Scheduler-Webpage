@@ -1,14 +1,20 @@
 'use strict'
-// ? INDEX PAGE MODALS --------------------------------------
-
-// % ADD STUDENT MODAL -------------------------------------
-var myModal = document.getElementById('myModal');
-var myInput = document.getElementById('myInput');
-
-// ? myModal.addEventListener('shown.bs.modal', function () {
-//   myInput.focus();
-// })
-//%--------------------------------------------
 
 
-// need a button card click action here with the id cardActions
+
+
+// ! scroll to top button function--------------
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+//!-----------------------------------------------

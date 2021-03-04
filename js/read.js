@@ -42,6 +42,8 @@ let createCard = (
 		createNewCard.className = "card h-100 cardColor btn btnStudentCard";
 		createNewCard.id = "alignLeft";
 		console.log(createNewCard);
+        createNewCard.setAttribute("data-bs-toggle","modal")
+        createNewCard.setAttribute("data-bs-target","#deleteUpdateStudentModal")
 
 		const cardBodyDiv = document.createElement("div");
 		cardBodyDiv.className = "card-body";
@@ -94,5 +96,3 @@ let createCard = (
 		cardGrid.appendChild(cardColInGrid);
 	} // finally putting everything in grid
 }; //@ this is where the age parentname and contact number goes
-
-createCard();

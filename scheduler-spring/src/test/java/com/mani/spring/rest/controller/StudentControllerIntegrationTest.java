@@ -69,7 +69,7 @@ public class StudentControllerIntegrationTest {
 		//Student object together as a list converted to json
 		String sList = this.mapper.writeValueAsString(STUDENTS);
 		
-		this.mockMvc.perform(get("/student/readAll").accept(MediaType.APPLICATION_JSON)) // why is this perform method getting me 3 sets of the same json array!!!!!!!!
+		this.mockMvc.perform(get("/student/readAll").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
                 .andExpect(content().json(sList));
 	}
@@ -79,9 +79,6 @@ public class StudentControllerIntegrationTest {
 	@Test
 	void readByStudentIDTest() throws Exception {
 		String s = this.mapper.writeValueAsString(TEST_STUDENT_1);
-		System.out.println(s);
-		System.out.println(s);
-		System.out.println(s);
 		
 		this.mockMvc.perform(get("/student/read/studentID/" + (TEST_STUDENT_1.getStudentID())).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
@@ -92,7 +89,7 @@ public class StudentControllerIntegrationTest {
 	
 	@Test
 	void findByFirstNameLikeTest() throws Exception {
-		String sList = "[" + this.mapper.writeValueAsString(TEST_STUDENT_1) + "]"; // need these brackets as there can be multiple people with the same first name, unlike studentID
+		String sList = "[" + this.mapper.writeValueAsString(TEST_STUDENT_1) + "]"; 
 		this.mockMvc.perform(get("/student/read/firstName/" + (TEST_STUDENT_1.getFirstName())).accept(MediaType.APPLICATION_JSON)) 
 				.andExpect(status().isOk())
                 .andExpect(content().json(sList));
@@ -102,10 +99,6 @@ public class StudentControllerIntegrationTest {
 	@Test
 	void updateByStudentIDTest() throws Exception {
 		String s = this.mapper.writeValueAsString(TEST_STUDENT_2);
-		System.out.println(s);
-		System.out.println(s);
-		System.out.println(s);
-		System.out.println(s);
 		
 		this.mockMvc.perform(put("/student/update/studentID/" + (TEST_STUDENT_2.getStudentID())).accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON).content(s))

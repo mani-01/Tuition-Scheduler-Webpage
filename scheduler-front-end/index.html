@@ -7,44 +7,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Mani">
   <title>Tuition Scheduler</title>
-  <link rel="icon" 
-      type="image/png" 
-       href="scheduler-favicon.png"/>
-
-
-
-
+  <link rel="icon" type="image/png" href="scheduler-favicon.png" />
   <!--bootstrap css part-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <!-- ? some nice font icons-->
   <link href="index.css" rel="stylesheet" type="text/css">
-
 </head>
 
-<body >
 
-  
-        <table>
-          <tr>
-            <td><img src="scheduler-logo-removebg.png" alt="Tuition scheduler logo" class="img-fluid rounded mx-auto d-block"></td>
-            
-          </tr>
-          <tr>
-            <td><p>
-              <b>Welcome to Tuition Scheduler.</b> A place where tutors can enroll new students, view a list of all students, update student contact details, and unenroll past students to keep a tutoring business organised.
-            </p></td>
-            
-          </tr>
+<body>
 
-          <tr>
-            <td><a href="readpage.html">
-              <button type="button" class="btn btn-primary  btn-lg" >Get Started!</button>  
-            </a></td>
-            
-          </tr>
-        </table>
+  <div class="container">
 
+
+    <header>
+      <div class="row">
+        <div class="col-sm">
+          <img src="scheduler-logo-removebg.png" alt="Tuition scheduler logo"
+            class="smallerLogo img-fluid rounded mx-auto d-block ">
+        </div>
+      </div>
+
+      <div class="row justify-content-center ">
+        <div class="col-md-8">
+          <p class="text-center">
+            <b>Welcome to Tuition Scheduler.</b> A place where tutors can enroll new students, view a list of all
+            students, update student contact details, and unenroll past students to keep a tutoring business organised.
+          </p>
+        </div>
+        <div class="col-md-8">
+          <p class="text-center">
+            Hover over a card to view its actions.
+          </p>
+        </div>
+
+      </div>
+    </header>
+
+
+    <div class="row justify-content-center" style="padding-top: 0px;">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- ? CARD GRID DIV -->
+
+        <!-- !  ADD CARD START -------------------------------------- -->
+        <div class="col">
+          <div class="card h-100 startCardColor btn btnAddNewStudent" data-bs-toggle="modal"
+            data-bs-target="#addStudentModal">
+            <div class="card-body">
+              <i class="bi bi-person-plus-fill" style="font-size: 40px;"></i>
+              <p class="card-text">
+                Add New Student.
+              </p>
+              <a href="" id="stretched-link" alt="add new student"></a>
+            </div>
+          </div>
+        </div>
+        <!-- !  ADD CARD END -------------------------------------- -->
+
+        <!-- !  CARD START -------------------------------------- -->
+        <div class="col">
+          <div class="card h-100 cardColor">
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-8">
+                  <h5 class="card-title">firstName lastName</h5>
+                </div>
+                <div class="col-4 text-end">
+                  ID
+                </div>
+              </div>
+
+
+              <p class="card-text">
+                Age:
+                <br>
+                Parent's Name:
+                <br>
+                Contact Number:
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- !  CARD END --------------------------------------->
+
+      </div> <!-- ? CARD GRID DIV END-->
+
+      <!-- ! ADD STUDENT MODAL -->
+      <div class="modal fade" id="addStudentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Add a new student to the table.</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- % form (inside modal) here ------------------------->
+              <form>
+                <!--first and last name input --> <!--note need to change the aria-labels?? -->
+                <div class="row mb-4">
+                  <div class="row">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">First Name</span>
+                      <input type="text" class="form-control" placeholder="first name" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Last Name</span>
+                      <input type="text" class="form-control" placeholder="last name" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- age input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Age</span>
+                  <input type="number" class="form-control" placeholder="age" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              
+                <!-- parent name input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Parent's Name</span>
+                  <input type="text" class="form-control" placeholder="parent's name" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+
+                <!-- contact number input -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Contact Number</span>
+                  <input type="number" class="form-control" placeholder="contact number" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              <!-- % form (inside modal) here END ---------->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary mani-button">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ! ADD STUDENT MODAL END------------------------------->
+
+
+
+    </div>
+  </div>
+  </div>
+
+  </div>
+
+
+  <!-- <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+  </div> -->
 
 
 
@@ -64,22 +185,3 @@
 </body>
 
 </html>
-
-
-
-
-
-<!-- <div class="text-center" class="position-absolute top-0 start-50 translate-middle-x">
-  
-        <img class="img-fluid" width="400"  alt="Tuition scheduler logo" src="scheduler-logo.png" >
-
-        <div class="text-center" >
-          <p class="fs-6">Welcome to Tuition Scheduler. A place where you can view a list of your enrolled students, add new students, update students' contact details, and remove past students.</p>
-        <button type="button" class="btn btn-primary position-relative">
-          Mails <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span>
-        </button>
-        </div>
-        
-        
-
-  </div> -->

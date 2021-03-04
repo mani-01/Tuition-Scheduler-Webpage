@@ -28,6 +28,15 @@
 	color: #A2BABC;
 }
 
+.btnStudentCard:hover{
+	background-color: #1f2831;
+	color: #F3F5F2;
+}
+.btnStudentCard:active{
+	background-color: #141a20;
+	color: #A2BABC;
+}
+
 
 /* .mani-button{
 	background-color: #336394;
@@ -80,63 +89,3 @@
 #807B7A
 #455769
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* div {
-	border: 1px;
-	border-style: solid;
-	background-color: coral;
-} */
-
-
-/* .btn {
-	background-color: #1c6e8c;
-	outline: none;
-	box-shadow: none;
-	border: 0px;
-	font-size: medium;
-	color: #ffffff;
-
-	padding-top: 3%;
-	padding-bottom: 3%;
-	padding-inline-start: 5%;
-	padding-inline-end: 5%;
-}
-.btn:hover {
-	outline: none;
-	background-color: #0a2f3d;
-}
-.btn:focus {
-	outline: none;
-	background-color: #1c6e8c;
-	box-shadow: none;
-}
-.btn:active {
-	background-color: #041a22;
-	outline: none;
-	box-shadow: none;
-}
-.btn:active:focus {
-	outline: none;
-	box-shadow: none;
-} */

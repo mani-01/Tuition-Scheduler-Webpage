@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 // reponse entitiy would be in a json format.
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,7 +24,8 @@ import com.mani.spring.service.StudentService;
 @RestController
 //this is where the name of the url to access the whole table goes
 // example -> jdbc:serverURL:port/student
-@RequestMapping("/student") 
+@RequestMapping("/student")
+@CrossOrigin
 public class StudentController {
 	
 	//passes things into the service through the variable and constructor.

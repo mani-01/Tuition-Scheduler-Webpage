@@ -15,8 +15,7 @@ let readFromSpring = () => {
 					.then((data) => {
 						// input is json
 						console.log(data); // prints json
-						createCard(data
-						);
+						createCard(data);
 					})
 			);
 		})
@@ -25,9 +24,7 @@ let readFromSpring = () => {
 		});
 };
 
-let createCard = (
-    data
-) => {
+let createCard = (data) => {
 	for (let i = 0; i < data.length; i++) {
 		// choosing where to put the card <div class="row row-cols-1 row-cols-md-3 g-4">
 		const cardGrid = document.querySelector("#cardGrid");
@@ -40,10 +37,13 @@ let createCard = (
 
 		const createNewCard = document.createElement("div");
 		createNewCard.className = "card h-100 cardColor btn btnStudentCard";
-		createNewCard.id = "alignLeft";
+		createNewCard.id = "alignLeft"; 
+		createNewCard.setAttribute("data-bs-toggle", "modal");
+		createNewCard.setAttribute("data-bs-target", `#updateDeleteModal${i}`);
+
+		modalUpdateDelete(data[i], i)
+
 		console.log(createNewCard);
-        createNewCard.setAttribute("data-bs-toggle","modal")
-        createNewCard.setAttribute("data-bs-target","#deleteUpdateStudentModal")
 
 		const cardBodyDiv = document.createElement("div");
 		cardBodyDiv.className = "card-body";
@@ -59,7 +59,7 @@ let createCard = (
 
 		const cardTitle = document.createElement("h5");
 		cardTitle.className = "card-title";
-		cardTitle.innerText = `${data[i].firstName} ${data[i].lastName}`;;
+		cardTitle.innerText = `${data[i].firstName} ${data[i].lastName}`;
 		cardTitle.id = "alignLeft";
 
 		const cardIDNumber = document.createElement("div");
@@ -94,5 +94,8 @@ let createCard = (
 		cardColInGrid.appendChild(createNewCard);
 
 		cardGrid.appendChild(cardColInGrid);
+
+		// createNewCard.onclick = function() { modalUpdateDelete(data[i], i) }; // sets onclick on card to run modal action
+
 	} // finally putting everything in grid
-}; //@ this is where the age parentname and contact number goes
+};

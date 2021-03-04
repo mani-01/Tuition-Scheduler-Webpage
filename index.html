@@ -19,6 +19,74 @@
 
 <body>
 
+  <div id=modalGeneratorDiv>
+
+  </div>
+
+  <!-- ! ADD STUDENT MODAL-->
+  <div class="modal fade" id="addStudentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add a new student to the table.</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- % form (inside modal) here ------------------------->
+          <form>
+            <!--first and last name input -->
+            <div class="row mb-4">
+              <div class="row">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">First Name</span>
+                  <input type="text" class="form-control" placeholder="first name" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Last Name</span>
+                  <input type="text" class="form-control" placeholder="last name" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+
+            <!-- age input -->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Age</span>
+              <input type="number" class="form-control" placeholder="age" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+
+            <!-- parent name input -->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Parent's Name</span>
+              <input type="text" class="form-control" placeholder="parent's name" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+
+
+            <!-- contact number input -->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Contact Number</span>
+              <input type="number" class="form-control" placeholder="contact number" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+            <!-- % form (inside modal) here END ---------->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary mani-button">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ! ADD STUDENT MODAL END------------------------------->
+
+
+
   <div class="container">
 
 
@@ -39,7 +107,7 @@
         </div>
         <div class="col-md-8">
           <p class="text-center">
-            Hover over a card to view its actions.
+            Click on a card to view its actions.
           </p>
         </div>
 
@@ -70,29 +138,29 @@
         <!-- !  ADD CARD END -------------------------------------- -->
 
 
-<!-- !  TEST CARD START -------------------------------------- -->
-<div class="col" id="cardCol">
-  <div class="card h-100 cardColor btn btnStudentCard" id="alignLeft" data-bs-toggle="modal"
-  data-bs-target="#deleteUpdateStudentModal">
-    <div class="card-body" id="cardBody">
+        <!-- !  TEST CARD START -------------------------------------- -->
+        <div class="col" id="cardCol">
+          <div class="card h-100 cardColor btn btnStudentCard" id="alignLeft" data-bs-toggle="modal"
+            data-bs-target="#deleteUpdateStudentModal">
+            <div class="card-body" id="cardBody">
 
-      <div class="row" id="cardRow">
-        <div class="col-8" id="cardCol1">
-          <h5 class="card-title" id="cardTitle alignLeft">firstName lastName</h5>
+              <div class="row" id="cardRow">
+                <div class="col-8" id="cardCol1">
+                  <h5 class="card-title" id="cardTitle alignLeft">firstName lastName</h5>
+                </div>
+                <div class="col-4 text-end">
+                  ID
+                </div>
+              </div>
+
+              <p class="card-text">Age: placeholder tester</p>
+              <p class="card-text">Parent's Name: placeholder tester</p>
+              <p class="card-text">Contact Number: placeholder tester</p>
+
+            </div>
+          </div>
         </div>
-        <div class="col-4 text-end">
-          ID
-        </div>
-      </div>
-
-      <p class="card-text">Age: placeholder tester</p>
-      <p class="card-text">Parent's Name: placeholder tester</p>
-      <p class="card-text">Contact Number: placeholder tester</p>
-
-    </div>
-  </div>
-</div>
-<!-- !  TEST CARD END -------------------------------------- -->
+        <!-- !  TEST CARD END -------------------------------------- -->
 
 
 
@@ -120,146 +188,6 @@
         <!-- ! dont deleteCARD END --------------------------------------->
 
       </div> <!-- ? CARD GRID DIV END-->
-
-
-
-
-
-
-
-
-
-
-
-      <!-- ! ADD STUDENT MODAL -->
-      <div class="modal fade" id="addStudentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Add a new student to the table.</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <!-- % form (inside modal) here ------------------------->
-              <form>
-                <!--first and last name input -->
-                <!--note need to change the aria-labels?? -->
-                <div class="row mb-4">
-                  <div class="row">
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1">First Name</span>
-                      <input type="text" class="form-control" placeholder="first name" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1">Last Name</span>
-                      <input type="text" class="form-control" placeholder="last name" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- age input -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Age</span>
-                  <input type="number" class="form-control" placeholder="age" aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </div>
-
-                <!-- parent name input -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Parent's Name</span>
-                  <input type="text" class="form-control" placeholder="parent's name" aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </div>
-
-
-                <!-- contact number input -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Contact Number</span>
-                  <input type="number" class="form-control" placeholder="contact number" aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </div>
-                <!-- % form (inside modal) here END ---------->
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary mani-button">Understood</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ! ADD STUDENT MODAL END------------------------------->
-
-
-
-      <!-- ! UPDATE STUDENT/ DELETE STUDENT MODAL -->
-      <div class="modal fade" id="deleteUpdateStudentModal" data-bs-backdrop="static" data-bs-keyboard="false"
-        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel" style="color:red">Delete or update student details.</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <!-- % form (inside modal) here ------------------------->
-              <form>
-                <!--first and last name input -->
-                <!--note need to change the aria-labels?? -->
-                <div class="row mb-4">
-                  <div class="row">
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1">First Name</span>
-                      <input type="text" class="form-control" placeholder="first name" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1">Last Name</span>
-                      <input type="text" class="form-control" placeholder="last name" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- age input -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Age</span>
-                  <input type="number" class="form-control" placeholder="age" aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </div>
-
-                <!-- parent name input -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Parent's Name</span>
-                  <input type="text" class="form-control" placeholder="parent's name" aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </div>
-
-
-                <!-- contact number input -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Contact Number</span>
-                  <input type="number" class="form-control" placeholder="contact number" aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </div>
-                <!-- % form (inside modal) here END ---------->
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary mani-button">Understood</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ! UPDATE STUDENT/ DELETE STUDENT MODAL END------------------------------->
-
-
 
 
     </div>
@@ -297,10 +225,11 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
   <script src="js/index.js"></script>
-  <!-- note <script src="js/create.js"></script> -->
+
+  <script src="js/create.js"></script>
   <script src="js/read.js"></script>
-  <!-- note <script src="js/update.js"></script>
-    <!-- note script src="js/delete.js"></script> -->
+  <script src="js/updateAndDelete.js"></script>
+
 
   <!-- please ignore-->
 </body>

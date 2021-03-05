@@ -40,10 +40,10 @@
 	color: #d0e2e4;
 }
 
-.btn-secondary{
-	/* padding: 20px; */
+/* .btn-secondary{
+	 padding: 20px; 
 
-}
+} */
 
 /* .mani-button{
 	background-color: #336394;
@@ -60,6 +60,19 @@
 .mani-button, .mani-button:active, .mani-button:hover {
 	outline: none;
 	box-shadow: none;
+} */
+
+.editFormLabelColor {
+	color: #4d6945;
+}
+
+.aBitOfPadding {
+	padding-top: 20px;
+}
+
+/* .newContactNumberSaveButtonDiv{
+	padding-top: 10px;
+	padding-bottom: 10px;
 } */
 
 

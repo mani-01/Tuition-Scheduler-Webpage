@@ -66,6 +66,10 @@
 	color: #4d6945;
 }
 
+.errorColor {
+	color: #cc3c3c;
+}
+
 .aBitOfPadding {
 	padding-top: 20px;
 }

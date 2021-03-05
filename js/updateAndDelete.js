@@ -134,8 +134,6 @@ let modalUpdateDelete = (dataI, i) => {
 
 
 
-// note need to remember to catch the errors/display the correct errors.
-
 let deleteStudent = (studentID) => {
 
   fetch(`http://localhost:9999/student/delete/studentID/${studentID}`,{method:`DELETE`})

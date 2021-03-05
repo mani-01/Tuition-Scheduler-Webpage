@@ -41,14 +41,14 @@
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">First Name</span>
                   <input type="text" class="form-control" placeholder="first name" aria-label="Username"
-                    aria-describedby="basic-addon1">
+                    aria-describedby="basic-addon1" id="userInputFirstName">
                 </div>
               </div>
               <div class="row">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">Last Name</span>
                   <input type="text" class="form-control" placeholder="last name" aria-label="Username"
-                    aria-describedby="basic-addon1">
+                    aria-describedby="basic-addon1" id="userInputLastName">
                 </div>
               </div>
             </div>
@@ -57,14 +57,14 @@
             <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1">Age</span>
               <input type="number" class="form-control" placeholder="age" aria-label="Username"
-                aria-describedby="basic-addon1">
+                aria-describedby="basic-addon1" id="userInputAge">
             </div>
 
             <!-- parent name input -->
             <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1">Parent's Name</span>
               <input type="text" class="form-control" placeholder="parent's name" aria-label="Username"
-                aria-describedby="basic-addon1">
+                aria-describedby="basic-addon1" id="userInputParentName">
             </div>
 
 
@@ -72,13 +72,13 @@
             <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1">Contact Number</span>
               <input type="number" class="form-control" placeholder="contact number" aria-label="Username"
-                aria-describedby="basic-addon1">
+                aria-describedby="basic-addon1" id="userInputContactNumber">
             </div>
             <!-- % form (inside modal) here END ---------->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary mani-button">Understood</button>
+          <button type="button" class="btn btn-primary mani-button" id="addStudentConfirmationButton">Create</button>
         </div>
       </div>
     </div>
@@ -117,7 +117,7 @@
 <div class="row justify-content-center" style="padding: 20px;">
 <div class="col-md-5">
   <div class="card h-100 startCardColor btn btnAddNewStudent" data-bs-toggle="modal"
-    data-bs-target="#addStudentModal">
+    data-bs-target="#addStudentModal" id="addNewStudentButton">
     <div class="card-body">
       <i class="bi bi-person-plus-fill" style="font-size: 40px;"></i>
       <p class="card-text">

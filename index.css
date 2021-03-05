@@ -1,5 +1,5 @@
 #landing-page body {
-	background-color: #A2BABC;
+	background-color: #d0e2e4;
 }
 
 #landing-page .smallerLogo {
@@ -13,21 +13,37 @@
 }
 
 .startCardColor {
-	background-color: #A2BABC;
+	background-color: #d0e2e4;
 	color: #455769;
 	border-color: #455769;
 }
 
+#alignLeft {
+	text-align: left;
+}
 
 .btnAddNewStudent:hover{
 	background-color: #455769;
-	color: #A2BABC;
+	color: #d0e2e4;
 }
 .btnAddNewStudent:active{
 	background-color: #28333f;
-	color: #A2BABC;
+	color: #d0e2e4;
 }
 
+.btnStudentCard:hover{
+	background-color: #1f2831;
+	color: #F3F5F2;
+}
+.btnStudentCard:active{
+	background-color: #141a20;
+	color: #d0e2e4;
+}
+
+/* .btn-secondary{
+	 padding: 20px; 
+
+} */
 
 /* .mani-button{
 	background-color: #336394;
@@ -44,6 +60,23 @@
 .mani-button, .mani-button:active, .mani-button:hover {
 	outline: none;
 	box-shadow: none;
+} */
+
+.editFormLabelColor {
+	color: #4d6945;
+}
+
+.errorColor {
+	color: #cc3c3c;
+}
+
+.aBitOfPadding {
+	padding-top: 20px;
+}
+
+/* .newContactNumberSaveButtonDiv{
+	padding-top: 10px;
+	padding-bottom: 10px;
 } */
 
 
@@ -73,6 +106,31 @@
 }
 
 
+
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	background-color: #F3F5F2;
+	
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 10px;
+	font-size: 18px;
+  }
+  
+#myBtn:hover {
+	background-color: #b5b6b4;
+	color: #12171b;
+}
+
+
+
 /* * nice colors that i can use 
 #F3F5F2
 #818484
@@ -80,63 +138,3 @@
 #807B7A
 #455769
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* div {
-	border: 1px;
-	border-style: solid;
-	background-color: coral;
-} */
-
-
-/* .btn {
-	background-color: #1c6e8c;
-	outline: none;
-	box-shadow: none;
-	border: 0px;
-	font-size: medium;
-	color: #ffffff;
-
-	padding-top: 3%;
-	padding-bottom: 3%;
-	padding-inline-start: 5%;
-	padding-inline-end: 5%;
-}
-.btn:hover {
-	outline: none;
-	background-color: #0a2f3d;
-}
-.btn:focus {
-	outline: none;
-	background-color: #1c6e8c;
-	box-shadow: none;
-}
-.btn:active {
-	background-color: #041a22;
-	outline: none;
-	box-shadow: none;
-}
-.btn:active:focus {
-	outline: none;
-	box-shadow: none;
-} */

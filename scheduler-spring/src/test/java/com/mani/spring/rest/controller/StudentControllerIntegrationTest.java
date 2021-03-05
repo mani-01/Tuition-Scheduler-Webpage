@@ -41,12 +41,12 @@ public class StudentControllerIntegrationTest {
     private ObjectMapper mapper; // POJO object -> JSON conversion
 	
 	// the fake data
-	private final Student TEST_STUDENT_1 = new Student(1, "Levon", "Riccione", 10, "Ainslie", "07773005758");
-	private final Student TEST_STUDENT_2 = new Student(2, "Mathew", "Snowman", 14, "Anabal", "07533179983");
-	private final Student TEST_STUDENT_3 = new Student(3, "Melody", "Zavattari", 13, null, "07759848967");
-	private final Student TEST_STUDENT_4 = new Student(4, "Sheba", "Thompstone", 8, null, "07742506077");
-	private final Student TEST_STUDENT_5 = new Student(5, "maahi", "kat", 7, "neela", "5668789");
-	private final Student TEST_STUDENT_6 = new Student(6, "mani555", "ggg555", 55, "parent5", "0774611111");
+	private final Student TEST_STUDENT_1 = new Student(1, "Luke", "Skywalker", 53, "Anakin", "07392658849");
+	private final Student TEST_STUDENT_2 = new Student(2, "Storm", "Trooper", 14, "Finn", "07338492837");
+	private final Student TEST_STUDENT_3 = new Student(3, "Rey", "Palpatine", 31, "Emperor", "07889957463");
+	private final Student TEST_STUDENT_4 = new Student(4, "Han", "Solo", 47, "Jabba", "07898765654");
+	private final Student TEST_STUDENT_5 = new Student(5, "Kylo", "Ren", 33, "Han", "07777762517");
+	private final Student TEST_STUDENT_6 = new Student(6,"Darth", "Vader", 95, "Palpatine", "07388827454");
 	private final List<Student> STUDENTS = List.of(TEST_STUDENT_1, TEST_STUDENT_2, TEST_STUDENT_3, TEST_STUDENT_4, TEST_STUDENT_5, TEST_STUDENT_6);
 	
 	// defining the conversion map that is going to be used in some methods below

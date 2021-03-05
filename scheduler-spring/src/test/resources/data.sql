@@ -1,6 +1,6 @@
-INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Levon', 'Riccione', 10, 'Ainslie', '07773005758');
-INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Mathew', 'Snowman', 14, 'Anabal', '07533179983');
-INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Melody', 'Zavattari', 13, null, '07759848967');
-INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Sheba', 'Thompstone', 8, null, '07742506077');
-INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('maahi', 'kat', 7, 'neela', '5668789');
-INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('mani555', 'ggg555', 55, 'parent5', '0774611111');
+INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Luke', 'Skywalker', 53, 'Anakin', '07392658849');
+INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Storm', 'Trooper', 14, 'Finn', '07338492837');
+INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Rey', 'Palpatine', 31, 'Emperor', '07889957463');
+INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Han', 'Solo', 47, 'Jabba', '07898765654');
+INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Kylo', 'Ren', 33, 'Han', '07777762517');
+INSERT INTO student (firstName, lastName, age, parentName, contactNumber) VALUES ('Darth', 'Vader', 95, 'Palpatine', '07388827454');

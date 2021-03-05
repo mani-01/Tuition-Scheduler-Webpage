@@ -7,17 +7,11 @@ window.onload = () => {
 
 let readFromSpring = () => {
 	fetch("http://localhost:9999/student/readAll")
-		.then((response) => {
-			console.log(response); // gets the response
-			console.log(
-				response
-					.json() // promise - converts json data ready for us to use
+		.then((response) => { // gets the response
+				response.json() // promise - converts json data ready for us to use
 					.then((data) => {
-						// input is json
-						console.log(data); // prints json
 						createCard(data);
 					})
-			);
 		})
 		.catch((error) => {
 			console.log(error);
@@ -95,7 +89,7 @@ let createCard = (data) => {
 
 		cardGrid.appendChild(cardColInGrid);
 
-		// createNewCard.onclick = function() { modalUpdateDelete(data[i], i) }; // sets onclick on card to run modal action
+		
 
 	} // finally putting everything in grid
 };

@@ -92,15 +92,20 @@ let modalUpdateDelete = (dataI, i) => {
   const modalFooter = document.createElement("div");
   modalFooter.className = "modal-footer";
 
-  const modalEditButton = document.createElement("button");
+  const modalEditButton = document.createElement("button"); // @ update
   modalEditButton.innerText = "Edit";
   modalEditButton.className = "btn btn-secondary";
   modalEditButton.setAttribute("type", "button")
+  // modalUpdateDelete(data[i], i)
   
-  const modalDeleteButton = document.createElement("button");
+  
+
+  const modalDeleteButton = document.createElement("button"); // @ delete
   modalDeleteButton.innerText = "Delete";
   modalDeleteButton.className = "btn btn-secondary";
+  modalDeleteButton.id = "withDeleteConfirmation";
   modalDeleteButton.setAttribute("type", "submit")
+  modalDeleteButton.onclick = function() { deleteStudent(dataI.studentID) };
   
   
   const modalCloseButton = document.createElement("button");
@@ -129,88 +134,24 @@ let modalUpdateDelete = (dataI, i) => {
                 modalInfoRowChild.appendChild(modelBodyParentName)
                 modalInfoRowChild.appendChild(modelBodyContactNumber)
           modalContent.appendChild(modalFooter);
-          modalFooter.appendChild(modalEditButton);
-          modalFooter.appendChild(modalDeleteButton);
-          modalFooter.appendChild(modalCloseButton);
-
-
-
-
-
+            modalFooter.appendChild(modalEditButton);
+            modalFooter.appendChild(modalDeleteButton);
+            modalFooter.appendChild(modalCloseButton);
 
 };
 
-/*
-
-<div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary mani-button">Understood</button>
-      </div>
 
 
+let deleteStudent = (studentID) => {
 
-<!-- ! UPDATE STUDENT/ DELETE STUDENT MODAL -->
-<div class="modal fade" id="deleteUpdateStudentModal" data-bs-backdrop="static" data-bs-keyboard="false"
-  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel" style="color:red">Delete or update student details.</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      /*
-      */
-     /*
-        <!-- % form (inside modal) here ------------------------->
-        <form>
-        <!--first and last name input -->
-        <div class="row mb-4">
-        <div class="row">
-        
-        <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">First Name</span>
-                <input type="text" class="form-control" placeholder="first name" aria-label="Username"
-                  aria-describedby="basic-addon1">
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Last Name</span>
-                <input type="text" class="form-control" placeholder="last name" aria-label="Username"
-                  aria-describedby="basic-addon1">
-              </div>
-            </div>
-          </div>
-          <!-- age input -->
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Age</span>
-            <input type="number" class="form-control" placeholder="age" aria-label="Username"
-              aria-describedby="basic-addon1">
-          </div>
-
-          <!-- parent name input -->
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Parent's Name</span>
-            <input type="text" class="form-control" placeholder="parent's name" aria-label="Username"
-              aria-describedby="basic-addon1">
-          </div>
+  //to confirm delete------------
+  document.getElementById(studentID)
 
 
-          <!-- contact number input -->
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Contact Number</span>
-            <input type="number" class="form-control" placeholder="contact number" aria-label="Username"
-              aria-describedby="basic-addon1">
-          </div>
-          <!-- % form (inside modal) here END ---------->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary mani-button">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ! UPDATE STUDENT/ DELETE STUDENT MODAL END------------------------------->
-*/
+  fetch(`http://localhost:9999/student/delete/studentID/${studentID}`,{method:`DELETE`})
+  .then((studentID) => console.log(`CLICKED DELETE FOR ID: ${studentID}`))
+  .catch((error) => console.log(error));
+  
+  location.reload(); // refreshes the page
+
+} 

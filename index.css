@@ -6,7 +6,6 @@
 	width: 300px;
 }
 
-
 .cardColor {
 	background-color: #455769;
 	color: #F3F5F2;
@@ -40,28 +39,6 @@
 	color: #d0e2e4;
 }
 
-/* .btn-secondary{
-	 padding: 20px; 
-
-} */
-
-/* .mani-button{
-	background-color: #336394;
-	color: #F3F5F2;
-}
-.mani-button:hover{
-	background-color: #313e4b;
-	color: #A2BABC;
-}
-.mani-button:active{
-	background-color: #1a2129;
-	color: #A2BABC;
-}
-.mani-button, .mani-button:active, .mani-button:hover {
-	outline: none;
-	box-shadow: none;
-} */
-
 .editFormLabelColor {
 	color: #4d6945;
 }
@@ -73,11 +50,6 @@
 .aBitOfPadding {
 	padding-top: 20px;
 }
-
-/* .newContactNumberSaveButtonDiv{
-	padding-top: 10px;
-	padding-bottom: 10px;
-} */
 
 
 #stretched-button-fill::after {
@@ -105,9 +77,6 @@
     outline: 0;
 }
 
-
-
-
 #myBtn {
 	display: none;
 	position: fixed;
@@ -128,13 +97,3 @@
 	background-color: #b5b6b4;
 	color: #12171b;
 }
-
-
-
-/* * nice colors that i can use 
-#F3F5F2
-#818484
-#A2BABC
-#807B7A
-#455769
-*/

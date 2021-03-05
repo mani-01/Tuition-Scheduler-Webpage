@@ -20,14 +20,12 @@ let readFromSpring = () => {
 
 let createCard = (data) => {
 	for (let i = 0; i < data.length; i++) {
-		// choosing where to put the card <div class="row row-cols-1 row-cols-md-3 g-4">
 		const cardGrid = document.querySelector("#cardGrid");
 		// console.log(cardGrid);
 
 		// creating the new card here
 		const cardColInGrid = document.createElement("div");
 		cardColInGrid.className = "col";
-		// console.log(cardColInGrid);
 
 		const createNewCard = document.createElement("div");
 		createNewCard.className = "card h-100 cardColor btn btnStudentCard";
@@ -37,19 +35,14 @@ let createCard = (data) => {
 
 		modalUpdateDelete(data[i], i)
 
-		// console.log(createNewCard);
-
 		const cardBodyDiv = document.createElement("div");
 		cardBodyDiv.className = "card-body";
-		// console.log(cardBodyDiv);
 
 		const cardRow = document.createElement("div");
 		cardRow.className = "row";
-		// console.log(cardRow);
 
 		const cardCol1 = document.createElement("div");
 		cardCol1.className = "col-8";
-		// console.log(cardCol1);
 
 		const cardTitle = document.createElement("h5");
 		cardTitle.className = "card-title";
@@ -80,10 +73,6 @@ let createCard = (data) => {
 
 		cardBodyDiv.appendChild(cardRow);
 
-		// cardBodyDiv.appendChild(cardTextAge);
-		// cardBodyDiv.appendChild(cardTextParentName);
-		// cardBodyDiv.appendChild(cardTextContactNum);
-
 		createNewCard.appendChild(cardBodyDiv);
 		cardColInGrid.appendChild(createNewCard);
 
@@ -91,5 +80,5 @@ let createCard = (data) => {
 
 		
 
-	} // finally putting everything in grid
+	}
 };

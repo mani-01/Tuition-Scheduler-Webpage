@@ -8,21 +8,16 @@
   <meta name="author" content="Mani">
   <title>Tuition Scheduler</title>
   <link rel="icon" type="image/png" href="scheduler-favicon.png" />
-  <!--bootstrap css part-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-  <!-- ? some nice font icons-->
   <link href="/index.css" rel="stylesheet" type="text/css">
 </head>
 
 
 <body>
-
   <div id=modalGeneratorDiv>
-
   </div>
-
   <!-- ! ADD STUDENT MODAL-->
   <div class="modal fade" id="addStudentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -89,7 +84,6 @@
 
   <div class="container">
 
-
     <header>
       <div class="row">
         <div class="col-sm">
@@ -111,104 +105,32 @@
           </p>
         </div>
       </div>
-
-
-<!-- !  'ADD CARD' START -------------------------------------- -->
-<div class="row justify-content-center" style="padding: 20px;">
-<div class="col-md-5">
-  <div class="card h-100 startCardColor btn btnAddNewStudent" data-bs-toggle="modal"
-    data-bs-target="#addStudentModal" id="addNewStudentButton">
-    <div class="card-body">
-      <i class="bi bi-person-plus-fill" style="font-size: 40px;"></i>
-      <p class="card-text">
-        Add New Student.
-      </p>
-      <a href="" id="stretched-link" alt="add new student"></a>
-    </div>
-  </div>
-</div>
-</div>
-<!-- !  'ADD CARD' END -------------------------------------- -->
-
-
+      <!-- !  'ADD CARD' START -------------------------------------- -->
+      <div class="row justify-content-center" style="padding: 20px;">
+        <div class="col-md-5">
+          <div class="card h-100 startCardColor btn btnAddNewStudent" data-bs-toggle="modal"
+            data-bs-target="#addStudentModal" id="addNewStudentButton">
+            <div class="card-body">
+              <i class="bi bi-person-plus-fill" style="font-size: 40px;"></i>
+              <p class="card-text">
+                Add New Student.
+              </p>
+              <a href="" id="stretched-link" alt="add new student"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- !  'ADD CARD' END -------------------------------------- -->
     </header>
 
-
     <div class="row justify-content-center" style="padding-top: 0px;">
-
       <div class="row row-cols-1 row-cols-md-3 g-4" id="cardGrid">
-
-
-        <!-- ? CARD GRID DIV -->
-
-
-        <!-- !  TEST CARD START -------------------------------------- -
-        <div class="col" id="cardCol">
-          <div class="card h-100 cardColor btn btnStudentCard" id="alignLeft" data-bs-toggle="modal"
-            data-bs-target="#deleteUpdateStudentModal">
-            <div class="card-body" id="cardBody">
-
-              <div class="row" id="cardRow">
-                <div class="col-8" id="cardCol1">
-                  <h5 class="card-title" id="cardTitle alignLeft">firstName lastName</h5>
-                </div>
-                <div class="col-4 text-end">
-                  ID
-                </div>
-              </div>
-
-              <p class="card-text">Age: placeholder tester</p>
-              <p class="card-text">Parent's Name: placeholder tester</p>
-              <p class="card-text">Contact Number: placeholder tester</p>
-
-            </div>
-          </div>
-        </div>
-        <!-- !  TEST CARD END -------------------------------------- -->
-
-
-
-        <!-- ! dont delete CARD START -------------------------------------- 
-        <div class="col" id="cardCol">
-          <div class="card h-100 cardColor btn btnStudentCard" id="alignLeft">
-            <div class="card-body" id="cardBody">
-
-              <div class="row" id="cardRow">
-                <div class="col-8" id="cardCol1">
-                  <h5 class="card-title" id="cardTitle alignLeft">firstName lastName</h5>
-                </div>
-                <div class="col-4 text-end">
-                  ID
-                </div>
-              </div>
-
-              <p class="card-text">Age: placeholder tester</p>
-              <p class="card-text">Parent's Name: placeholder tester</p>
-              <p class="card-text">Contact Number: placeholder tester</p>
-
-            </div>
-          </div>
-        </div>
-        <!-- ! dont deleteCARD END --------------------------------------->
-
-      </div> <!-- ? CARD GRID DIV END-->
-
-
+      </div>
     </div>
   </div>
   </div>
-
   </div>
 
-
-  <!-- <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-  </div> -->
-
-
-
-
-  <!-- footer -->
   <footer style="padding: 30px;">
     <div class="text-center p-3" style="color: #455769;">
       ~Made by Mani~
@@ -220,25 +142,13 @@
       </button>
     </div>
   </footer>
-  <!-- footer -->
 
-
-
-  <!--bootstrap javascript part-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
   <script src="js/index.js"></script>
-
   <script src="js/create.js"></script>
   <script src="js/read.js"></script>
   <script src="js/updateAndDelete.js"></script>
-
-
-  <!-- please ignore-->
 </body>
-
 </html>
-
-
-<!-- test commit to dev branch-->

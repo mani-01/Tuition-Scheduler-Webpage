@@ -1,12 +1,10 @@
 "use strict";
 // ! update and delete modal generation for each card
 let modalUpdateDelete = (dataI, i) => {
-	// console.log(dataI);
 	// doing the same here as i did for the card
 
 	//need to put the modal in the body of the html...
 	const modalGenDiv = document.querySelector("#modalGeneratorDiv");
-	// console.log(modalGenDiv);
 
 	const modalRoot = document.createElement("div");
 	modalRoot.className = "modal fade";
@@ -49,16 +47,7 @@ let modalUpdateDelete = (dataI, i) => {
 
   const modalInfoRowChild = document.createElement("div");
 	modalInfoRowChild.className = "row";
-  console.log(modalInfoRowChild);
 
-  // formatting from card--------------------------
-  // const cardBodyDiv = document.createElement("div");
-  // cardBodyDiv.className = "card-body";
-  // console.log(cardBodyDiv);
-
-  // const cardRow = document.createElement("div");
-  // cardRow.className = "row";
-  // console.log(cardRow);
   // *---------------------------DATABASE INFO
   const modelBodyStudentID = document.createElement("p");
   modelBodyStudentID.className = "";
@@ -149,17 +138,12 @@ let modalUpdateDelete = (dataI, i) => {
 
 let deleteStudent = (studentID) => {
 
-  //could have a method to confirm deletion here?
-
   fetch(`http://localhost:9999/student/delete/studentID/${studentID}`,{method:`DELETE`})
   .then((studentID) => {
-    location.reload()}) // refreshes the page
-    // console.log(`CLICKED DELETE FOR ID: ${studentID}`)}
+    location.reload()})
   .catch((error) => console.log(error));
 
 }
-
-
 
 let updateStudent = (dataI , modalInfoRowChild, modelBodyContactNumber) => {
 	console.log("updateupdateupdateupdateupdate");
@@ -205,11 +189,7 @@ let updateStudent = (dataI , modalInfoRowChild, modelBodyContactNumber) => {
     let phoneNumberRegEx =  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 		//  if statement to filter out bad inputs
     if (phoneNumberRegEx.test(newNumber)) {
-			console.log(newNumber);
-      console.log(newContactNumberRowErrorEmpty);
-      console.log(newContactNumberRowError);
       modalInfoRowChild.appendChild(newContactNumberRowErrorEmpty)
-      // modalInfoRowChild.replaceChild(newContactNumberRowErrorEmpty, newContactNumberRowError);
 
       //json string with updated contact number
       let jsonUpdatedContactNumber = {
@@ -240,15 +220,8 @@ let updateStudent = (dataI , modalInfoRowChild, modelBodyContactNumber) => {
 
 		} else {
       modalInfoRowChild.appendChild(newContactNumberRowError)
-      // modalInfoRowChild.replaceChild(newContactNumberRowError, newContactNumberRowErrorEmpty);
-			console.log("NOT VALID");
     }
   }; 
-
-  
-  
-  
-
 
   newContactNumberLabelDiv.appendChild(newContactNumberLabel);
   newContactNumberUpdateInputDiv.appendChild(newContactNumberUpdateInput);
@@ -261,9 +234,4 @@ let updateStudent = (dataI , modalInfoRowChild, modelBodyContactNumber) => {
 
   modalInfoRowChild.replaceChild(newContactNumberRowDiv, modelBodyContactNumber);
 
-	// fetch(`http://localhost:9999/student/delete/studentID/${studentID}`,{method:`DELETE`})
-	// .then((studentID) => console.log(`CLICKED DELETE FOR ID: ${studentID}`))
-	// .catch((error) => console.log(error));
-
-	// location.reload(); // refreshes the page
 };

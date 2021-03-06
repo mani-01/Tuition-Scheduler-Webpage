@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `Student_test`;
-CREATE TABLE IF NOT EXISTS `Student_test`
+DROP TABLE IF EXISTS `Student`;
+CREATE TABLE IF NOT EXISTS `Student`
 (
    `studentID` integer AUTO_INCREMENT,
    firstName varchar (255) not null,

@@ -206,20 +206,25 @@ let updateStudent = (dataI , modalInfoRowChild, modelBodyContactNumber) => {
 			body: JSON.stringify(jsonUpdatedContactNumber)})
       .then((response) => {
         response.json()
-        .then((data) => {console.log(`something idno ${data}`)})
+        .then((data) => {console.log(`something idno ${data}`)
+        location.reload() 
+      })
 				.catch((error) => console.log(error));
-		});
+		})
+    ;
 
     // @ ------------------------
 
 
 
-    location.reload();
+    
 
 		} else {
       modalInfoRowChild.appendChild(newContactNumberRowError)
     }
   }; 
+
+  
 
   newContactNumberLabelDiv.appendChild(newContactNumberLabel);
   newContactNumberUpdateInputDiv.appendChild(newContactNumberUpdateInput);

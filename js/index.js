@@ -1,21 +1,21 @@
-'use strict'
+'use strict';
 
+// scroll back to top button
+let scrollToTopButton = document.getElementById("myBtn");
+window.onscroll = function () {
+    scrollFunction()
+};
 
-
-
-// ! scroll to top button function--------------
-let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+let scrollFunction = () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopButton.style.display = "block";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
 }
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+
+let topFunction = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
-//!-----------------------------------------------
 

@@ -1,10 +1,12 @@
 'use strict';
 
-let deleteStudent = (studentID) => {
+// sends delete to api
+let sendDeleteToAPI = (studentID) => {
 
-    fetch(`http://localhost:9999/student/delete/studentID/${studentID}`,{method:`DELETE`})
+    fetch(`http://localhost:9999/student/delete/studentID/${studentID}`, {method: `DELETE`})
         .then((studentID) => {
-            location.reload()})
+            location.reload()
+        })
         .catch((error) => console.log(error));
 
 }

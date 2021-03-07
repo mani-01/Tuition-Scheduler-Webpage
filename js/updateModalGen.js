@@ -1,3 +1,4 @@
+'use strict';
 
 //update student modal info and logic
 let updateStudent = (dataI, modalInfoRowChild, modelBodyContactNumber) => {

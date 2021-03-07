@@ -25,7 +25,6 @@ confirmButton.onclick = function () {
         // make it into json
         let jsonatedInputs = inputsToJson(userInputsRawArray);
         sendCreateToAPI(jsonatedInputs);
-        location.reload();
     }
 };
 
@@ -144,6 +143,7 @@ let sendCreateToAPI = (userInputJSON) => {
             .json()
             .then((data) => {
                 console.log(`POSTED SUCCESSFULLY ${data}`);
+                location.reload();
             })
             .catch((error) => console.log(error));
     });

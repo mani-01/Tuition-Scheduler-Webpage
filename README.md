@@ -178,7 +178,7 @@ Once the fetch method is run to put or post information to the API, the whole we
 
 ### Licensing
 
-This project is licenced under the MIT licence. Information about this can be found in [LICENSE.md](https://github.com/mani-01/Tuition-Scheduler-Back-End/blob/Dev/LICENSE)
+This project is licenced under the [MIT licence](https://github.com/mani-01/Tuition-Scheduler-Webpage/blob/main/LICENSE).
 
 ### Contributors
 

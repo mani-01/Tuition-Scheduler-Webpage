@@ -134,7 +134,7 @@ let inputsToJson = (inputArray) => {
 //sends the user created student to api
 let sendCreateToAPI = (userInputJSON) => {
     console.log(userInputJSON);
-    fetch("http://localhost:9999/student/create", {
+    fetch(`http://${ip()}/student/create`, {
         method: `POST`,
         headers: {"Content-type": "application/json"},
         body: JSON.stringify(userInputJSON),

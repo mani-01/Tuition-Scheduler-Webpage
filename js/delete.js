@@ -3,7 +3,7 @@
 // sends delete to api
 let sendDeleteToAPI = (studentID) => {
 
-    fetch(`http://localhost:9999/student/delete/studentID/${studentID}`, {method: `DELETE`})
+    fetch(`http://${ip()}/student/delete/studentID/${studentID}`, {method: `DELETE`})
         .then((studentID) => {
             location.reload()
         })

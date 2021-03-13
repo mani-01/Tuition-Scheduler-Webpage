@@ -2,7 +2,7 @@
 
 // sending put method to api which then updates student in the database.
 let sendUpdateToAPI = (dataI, jsonUpdatedContactNumber) => {
-    fetch(`http://localhost:9999/student/update/studentID/${dataI.studentID}`, {
+    fetch(`http://${ip()}/student/update/studentID/${dataI.studentID}`, {
         method: `PUT`,
         headers: {"Content-type": "application/json",},
         body: JSON.stringify(jsonUpdatedContactNumber)

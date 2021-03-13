@@ -7,7 +7,7 @@ window.onload = () => {
 
 // gets all the students that are in the api/database.
 let readAllFromAPI = () => {
-    fetch("http://localhost:9999/student/readAll")
+    fetch(`http://${ip()}/student/readAll`)
         .then((response) => { // gets the response
             response.json() // promise - converts json data ready for us to use
                 .then((data) => {

@@ -4,7 +4,6 @@
 
 
 ###### Mac OS X ######
-
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -17,8 +16,8 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-###### Intellij ######
 
+###### Intellij ######
 # User-specific stuff:
 .idea/**/workspace.xml
 .idea/**/tasks.xml
@@ -32,3 +31,28 @@ Thumbs.db
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+
+
+######   Java   ######
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*

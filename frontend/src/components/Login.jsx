@@ -21,7 +21,17 @@ const Login = () => {
     <>
       <br/>
 
-      <Container className="col-sm-7">
+      <Container className="col-sm-9"
+                 style={{
+                   borderStyle: 'solid',
+                   borderColor: '#9dbdc1',
+                   borderWidth: '1px',
+                   paddingLeft: '50px',
+                   paddingRight: '50px',
+                   paddingTop: '40px',
+                   paddingBottom: '30px',
+                   borderRadius: '30px'
+                 }}>
         <h6><b>{signUpMode ? 'Sign up' : 'Login'} to continue:</b></h6>
         <Form>
           {signUpMode ? <FormGroupLogin prop={emailField}/> : null}

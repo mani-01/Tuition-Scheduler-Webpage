@@ -23,7 +23,7 @@ const Login = () => {
   return (
 
     <Row className="justify-content-center">
-      <Col xs={'11'}>
+      <Col xs={'7'}>
 
         <br/>
 

@@ -16,11 +16,9 @@ function App () {
       <Container>
         <TitleLogo/>
         <IntroText/>
-        <Row className="justify-content-center">
-          <Col xs={'7'}>
+
             <Login/>
-          </Col>
-        </Row>
+
       </Container>
     )
 }

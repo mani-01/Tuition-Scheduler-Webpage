@@ -9,12 +9,12 @@ import {
 } from 'reactstrap'
 import { useState } from 'react'
 
-const FormGroupLogin = (inputType, placeholder, inputId, formFeedback) => {
+const FormGroupLogin = ({ id, type, placeholder, formFeedback }) => {
 
   return (
     <FormGroup>
       {/*<Label for="password">Password:</Label>*/}
-      <Input type={inputType} placeholder={placeholder} id={inputId}/>
+      <Input id={id} type={type} placeholder={placeholder}/>
       <FormFeedback>{formFeedback}</FormFeedback>
     </FormGroup>
 

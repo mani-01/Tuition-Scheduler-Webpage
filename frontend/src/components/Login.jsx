@@ -15,7 +15,10 @@ const Login = () => {
   const [signUpMode, toggleSignUpMode] = useState(false)
   const signUpModeTrueFalse = () => toggleSignUpMode(!signUpMode)
 
-  const emailField = ['email', 'Email', 'email', 'formfeedbackplaceholder']
+  //id, type, placeholder, formFeedback
+  const emailField = ['loginEmail', 'email', 'Email' , 'formFeedbackGoesHere']
+  const usernameField = ['loginUsername', 'text', 'Username' , 'formFeedbackGoesHere']
+  const passwordField = ['loginPassword', 'password', 'Password' , 'formFeedbackGoesHere']
 
   return (
     <>
@@ -30,21 +33,15 @@ const Login = () => {
                    paddingRight: '50px',
                    paddingTop: '40px',
                    paddingBottom: '30px',
-                   borderRadius: '30px'
+                   borderRadius: '30px',
                  }}>
         <h6><b>{signUpMode ? 'Sign up' : 'Login'} to continue:</b></h6>
         <Form>
-          {signUpMode ? <FormGroupLogin prop={emailField}/> : null}
-          <FormGroup>
-            {/*<Label for="username">Username:</Label>*/}
-            <Input type="text" placeholder="Username" id="loginUsername"/>
-            <FormFeedback>You will not be able to see this</FormFeedback>
-          </FormGroup>
-          <FormGroup>
-            {/*<Label for="password">Password:</Label>*/}
-            <Input type="password" placeholder="Password" id="loginPassword"/>
-            <FormFeedback>Sweet! that name is available</FormFeedback>
-          </FormGroup>
+          {signUpMode ? <FormGroupLogin id={emailField[0]} type={emailField[1]} placeholder={emailField[2]} formFeedback={emailField[3]}/> : null}
+
+          <FormGroupLogin id={usernameField[0]} type={usernameField[1]} placeholder={usernameField[2]} formFeedback={usernameField[3]}/>
+
+          <FormGroupLogin id={passwordField[0]} type={passwordField[1]} placeholder={passwordField[2]} formFeedback={passwordField[3]}/>
 
 
         </Form>

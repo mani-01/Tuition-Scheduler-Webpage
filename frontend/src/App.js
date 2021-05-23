@@ -6,21 +6,20 @@ import Login from './components/Login.jsx'
 import IntroText from './components/IntroText.jsx'
 import { useState } from 'react'
 import TitleLogo from './components/TitleLogo'
+import StudentsList from './components/StudentsList'
 
 function App () {
 
-  const [isAuthenticated, toggleIsAuthenticated] = useState(false)
+  // change the default after implementing auth on backend
+  const [isAuthenticated, toggleIsAuthenticated] = useState(true)
 
-    return (
-
-      <Container>
-        <TitleLogo/>
-        <IntroText/>
-
-            <Login/>
-
-      </Container>
-    )
+  return (
+    <Container>
+      <TitleLogo/>
+      {isAuthenticated ? <StudentsList/> : <IntroText/>}
+      {isAuthenticated ? null : <Login/>}
+    </Container>
+  )
 }
 
 export default App
